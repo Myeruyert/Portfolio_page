@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <>
       <div
-        className="AboutMe"
+        className="AboutMe dark: bg-gray-900"
       >
         <div className="AboutMeWidth py-24">
           <div className="flex justify-center">
