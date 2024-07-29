@@ -8,26 +8,119 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); */
+
+body {
+  /* padding: 0 80px 0 80px; */
+  font-family: "Inter", sans-serif;
+}
+
+header,
+section,
+.AboutMeWidth,
+.skills,
+.experienceWidth,
+.work,
+.footer,
+.copyrightWidth {
+  /* padding: 0 80px; */
+  width: 85%;
+  margin: auto;
+}
+
+p,
+span,
+ul,
+li {
+  color: #4b5563;
+}
+
+.introImage {
+  box-shadow: 60px 60px #e5e7eb;
+  border: 10px solid white;
+}
+
+.AboutMe,
+.copyright,
+.experience {
+  background-color: #f9fafb;
+}
+
+.aboutMeImage {
+  box-shadow: -60px 60px #e5e7eb;
+  border: 10px solid white;
+  background-image: url("https://s3-alpha-sig.figma.com/img/a823/7c2d/a751e4a2db426ecfca4f62d9ba3dc8f4?Expires=1722816000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ScmRPtqSr3oqubAqMFwbeSujIqtc0BEB7HBtiF3q3PwzAz9cdfVMmpsoJDvcjMHnSNvajy~qXtB8wwXM-leo4lRSaNwBRfMoNuwGDj40wzPE9nvWkc-0EMddEgBiOLhzwjSD-PVkn7gzA2TisMzyrmWDt0FgWVSBXrHiFdkcFKpq2xBUruNbzJmgQVyotlE4IdWS1tN1mtZ04u~1u7YBhpDCStbEKgzvukJL9q~MNfpij~qgzu92SDEwoLNt58-KSlVmtNPgPZa8EUbryKrmxdCyevmKvR5XY~ToLvEK5vavKlZJ-vQLzgBXg3fEwo0e0AvcKPbCnvsK1DBGTl9QAQ__");
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutme {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.jslogo {
+  color: #ffd600;
+}
+
+.tslogo {
+  color: #3178c6;
+}
+
+.reactlogo {
+  color: #087ea4;
+}
+
+.postgre {
+  color: #0064a5;
+}
+
+.nodelogo {
+  color: #5fa04e;
+}
+
+.nestlogo {
+  color: #e0234e;
+}
+
+.mongologo {
+  color: #00684a;
+}
+
+.sasslogo {
+  color: #f06292;
+}
+
+.tailwindlogo {
+  color: #38bdf8;
+}
+
+.figmalogo {
+  color: #a259ff;
+}
+
+.storybooklogo {
+  color: #ff4081;
+}
+
+.gitlogo {
+  color: #f4511e;
 }
