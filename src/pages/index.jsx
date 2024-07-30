@@ -71,14 +71,14 @@ const allJobs = [
 const Home = () => {
   return (
     <>
-      <Header/>
-      <Intro/>
-      <AboutMe/>
-      <Skills/>
-      <div className="experience py-24">
+      <Header />
+      <Intro />
+      <AboutMe />
+      <Skills />
+      <div className="bg-gray-50 py-24 dark:bg-slate-900">
         <div className="experienceWidth">
           <div className="flex flex-col items-center">
-            <Titles title="Experiences"/>
+            <Titles title="Experiences" />
             <p className="mt-4 mb-12">
               Here is a quick summary of my most recent experiences:
             </p>
@@ -86,7 +86,7 @@ const Home = () => {
           <div className="mx-24">
             {experiences?.map((experience, i) => (
               <ExperienceCard
-              key={i}
+                key={i}
                 jobTitle={experience.jobTitle}
                 companyLogo={experience.companyLogo}
                 jobRoles={experience.jobRoles}
@@ -97,26 +97,24 @@ const Home = () => {
       </div>
       <div className="work py-24">
         <div className="flex flex-col items-center justify-center">
-          <Titles title="Work"/>
+          <Titles title="Work" />
           <p className="mt-4 mb-12">
             Some of the noteworthy projects I have built:
           </p>
 
-        {allJobs?.map((project, i) => (
-          <Work 
-            projectName={project.projectName}
-            description={project.description}
-            image={project.image}
-            swap = {i % 2}
-
-          />
-        ))}
-
+          {allJobs?.map((project, i) => (
+            <Work
+              projectName={project.projectName}
+              description={project.description}
+              image={project.image}
+              swap={i % 2}
+            />
+          ))}
         </div>
       </div>
 
-      <Footer/>
-      <div className="copyright ">
+      <Footer />
+      <div className="bg-gray-50 dark:bg-slate-900">
         <div className="copyrightWidth flex justify-center items-center gap-2 py-6">
           <LuCopyright />
           <span>2024 | Greetings with ❤️️ from Ulaanbaatar</span>

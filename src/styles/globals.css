@@ -16,7 +16,6 @@
   }
 } */
 
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -56,12 +55,6 @@ li {
 .introImage {
   box-shadow: 60px 60px #e5e7eb;
   border: 10px solid white;
-}
-
-.AboutMe,
-.copyright,
-.experience {
-  background-color: #f9fafb;
 }
 
 .aboutMeImage {

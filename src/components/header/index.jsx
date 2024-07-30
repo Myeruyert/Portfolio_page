@@ -3,7 +3,8 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
 
 const Header = () => {
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
+
   return (
     <header className="flex justify-between items-center py-4">
       <h1 className="text-3xl font-bold">TOM</h1>
@@ -15,15 +16,11 @@ const Header = () => {
           <li>Contact</li>
         </ul>
         <button
-          onClick = {() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="p-2 rounded-full focus:outline-none focus:ring-1 focus:ring-gray-500"
         >
-          {theme === "light" ? (
-            <MdOutlineLightMode />
-          ) : (
-            <MdOutlineDarkMode />
-          )}
-          </button>
+          {theme === "light" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+        </button>
         <button className="bg-black text-white rounded-lg py-1.5 px-4">
           Download CV
         </button>
