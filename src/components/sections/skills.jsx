@@ -38,22 +38,20 @@ const allLogos = [
 
 const Skills = () => {
   return (
-    <>
-      <div className="py-24 skills">
-        <div className="flex flex-col items-center">
-            <Titles title="Skills" />
-          <p className="mt-4 mb-12">
-            The skills, tools and technologies I am really good at:
-          </p>
-        </div>
-
-        <div className="icons text-6xl flex flex-wrap gap-16 justify-between">
-          {allLogos?.map((logoOne, i) => (
-            <Logos key={i} logos={logoOne.icon} texts={logoOne.label} />
-          ))}
-        </div>
+    <div className="py-12 md:py-24 px-4 md:px-0 skills">
+      <div className="flex flex-col items-center text-center">
+        <Titles title="Skills" />
+        <p className="mt-4 mb-8 md:mb-12">
+          The skills, tools and technologies I am really good at:
+        </p>
       </div>
-    </>
+
+      <div className="icons text-4xl md:text-6xl flex flex-wrap gap-8 md:gap-16 justify-center md:justify-between">
+        {allLogos?.map((logoOne, i) => (
+          <Logos key={i} logos={logoOne.icon} texts={logoOne.label} />
+        ))}
+      </div>
+    </div>
   );
 };
 

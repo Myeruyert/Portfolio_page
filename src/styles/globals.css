@@ -40,9 +40,24 @@ section,
 .work,
 .footer,
 .copyrightWidth {
-  /* padding: 0 80px; */
-  width: 85%;
+  width: 95%;
+  max-width: 1280px;
   margin: auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  header,
+  section,
+  .AboutMeWidth,
+  .skills,
+  .experienceWidth,
+  .work,
+  .footer,
+  .copyrightWidth {
+    width: 85%;
+    padding: 0;
+  }
 }
 
 p,

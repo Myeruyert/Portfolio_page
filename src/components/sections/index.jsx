@@ -5,41 +5,30 @@ import SocialLinks from "../small_components/socialLinks";
 
 const Intro = () => {
   return (
-    <>
-      <section className="flex justify-between py-24 pr-20">
-        <div className="w-1/2">
-          <div className="text mb-12">
-            <h1 className="text-6xl font-bold">Hi, I’m Tom 👋</h1>
-            <Paragraphs
-            paragraph="I specialize in full stack development, particularly with React.js
-            and Node.js. My main goal is to create exceptional digital
-            experiences that are fast, visually appealing, and accessible to
-            everyone. With over 7 years of experience in web development, I
-            continue to find joy in crafting innovative solutions and designs."
-            />
+    <section className="flex flex-col-reverse md:flex-row justify-between py-12 md:py-24 px-4 md:px-20 gap-8">
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <div className="text mb-8 md:mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold">Hi, I'm Mery 👋</h1>
+          <Paragraphs paragraph="..." />
+        </div>
+        <div className="mb-12">
+          <div className="mb-2 flex items-center justify-center md:justify-start">
+            <SlLocationPin className="mr-2" />
+            <span>Ulaanbaatar, Mongolia</span>
           </div>
-          <div className="mb-12">
-            <div className="mb-2 flex items-center">
-              <SlLocationPin className="mr-2" />
-              <span> Ulaanbaatar, Mongolia</span>
-            </div>
-            <div className="flex items-center">
-              <GoDotFill className="mr-2 text-emerald-500" />
-              <span>Available for new projects</span>
-            </div>
-          </div>
-          <div className="logos">
-            <SocialLinks/>
+          <div className="flex items-center justify-center md:justify-start">
+            <GoDotFill className="mr-2 text-emerald-500" />
+            <span>Available for new projects</span>
           </div>
         </div>
-
-        <img
-          className="introImage w-72 h-80"
-          src="https://s3-alpha-sig.figma.com/img/f3c0/0e99/fcbb58c0fdf3c59259201153876040ea?Expires=1722816000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Pchkx3mbCiax585SR5Sl4yZdFxV-t2xjgxDWDgH-HYRrKa7pOkf07p9lsL08dzqAC6a3DEP2v6KH25MszvUL94tH4msTnUo89oONjvsX41KRJ9aDAXIOs7Myyhwpq7cJYVHUAPHv~bis827YXtK2gGgWoZfHev--GzaqY320fRM-7NQFgw3k7fSn0nHjQGc26HH6kiLSJQchZY~1NJ1KNW2RiGYMbOMETUwExsK7jmCiScEfjjXsQ0kHy1PZ5apaavazXZ4i5rI9OgW5keYarTQkQWjWt4rhvvdz~21IA5Aowubc~IcbjrjNtdV1AUAaUHlDStFDkFoEtiATA5i5RA__"
-          alt=""
-        />
-      </section>
-    </>
+        <div className="logos flex justify-center md:justify-start">
+          <SocialLinks />
+        </div>
+      </div>
+      <div
+        className="introImage w-64 h-64 md:w-80 md:h-80 mx-auto mb-14 md:mb-0 md:mx-0 bg-no-repeat bg-[length:100%] bg-center"
+        style={{ backgroundImage: "url('images/IMG_0158.jpg')" }}></div>
+    </section>
   );
 };
 
