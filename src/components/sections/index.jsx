@@ -5,31 +5,41 @@ import SocialLinks from "../small_components/socialLinks";
 
 const Intro = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row justify-between py-12 md:py-24 px-4 md:px-20 gap-8">
-      <div className="w-full md:w-1/2 text-center md:text-left">
-        <div className="text mb-8 md:mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold">こんにちは！</h1>
-          <h1 className="text-4xl md:text-6xl font-bold　mt-2">
-            メルエルトです👋
-          </h1>
-        </div>
-        <div className="mb-12">
-          <div className="mb-2 flex items-center justify-center md:justify-start">
-            <SlLocationPin className="mr-2" />
-            <span>ウランバートル、モンゴル</span>
+    <section className=" py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+              こんにちは！
+            </h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+              メルエルトです👋
+            </h1>
           </div>
-          <div className="flex items-center justify-center md:justify-start">
-            <GoDotFill className="mr-2 text-emerald-500" />
-            <span>新規プロジェクト対応可能</span>
+
+          <div className="space-y-3">
+            <div className="flex items-center justify-center lg:justify-start space-x-2">
+              <SlLocationPin className="text-xl" />
+              <span>ウランバートル、モンゴル</span>
+            </div>
+            <div className="flex items-center justify-center lg:justify-start space-x-2">
+              <GoDotFill className="text-emerald-500" />
+              <span>新規プロジェクト対応可能</span>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-start">
+            <SocialLinks />
           </div>
         </div>
-        <div className="logos flex justify-center md:justify-start">
-          <SocialLinks />
+
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div
+            className="w-64 h-64 sm:w-80 sm:h-80 introImage bg-no-repeat bg-cover bg-center rounded-2xl"
+            style={{ backgroundImage: "url('images/IMG_0158.jpg')" }}
+          />
         </div>
       </div>
-      <div
-        className="introImage w-64 h-64 md:w-80 md:h-80 mx-auto mb-14 md:mb-0 md:mx-0 bg-no-repeat bg-[length:100%] bg-center"
-        style={{ backgroundImage: "url('images/IMG_0158.jpg')" }}></div>
     </section>
   );
 };
