@@ -14,13 +14,13 @@ const Work = ({ projectName, image, description, swap, technologies }) => {
         <div className="text-gray-900 font-bold text-center md:text-left">
           {projectName}
         </div>
-        <p className="my-4 md:my-6">
+        <div className="my-4 md:my-6">
           {description?.map((des, i) => (
             <p className="mb-2" key={i}>
               {des.des}
             </p>
           ))}
-        </p>
+        </div>
         <div className="flex flex-wrap gap-2 font-medium justify-center md:justify-start">
           {technologies?.map((titleOne, i) => (
             <Titles key={i} title={titleOne.title} />
