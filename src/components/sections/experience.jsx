@@ -14,14 +14,14 @@ const ExperienceCard = ({ companyLogo, jobTitle, jobRoles, date }) => {
         </h1>
         <ul className="dark:text-gray-300 pl-6">
           {jobRoles?.map((role, i) => (
-            <li key={i} className="list-disc">
+            <li key={i} className="list-disc dark:text-gray-300">
               {role}
             </li>
           ))}
         </ul>
       </div>
-      <div className="flex-none md:flex-1 text-center md:text-end dark:text-gray-400">
-        <p>{date}</p>
+      <div className="flex-none md:flex-1 text-center md:text-end dark:text-gray-300">
+        <p className="dark:text-gray-300">{date}</p>
       </div>
     </div>
   );

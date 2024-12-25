@@ -16,7 +16,7 @@ const Work = ({ projectName, image, description, swap, technologies }) => {
         </div>
         <div className="my-4 md:my-6">
           {description?.map((des, i) => (
-            <p className="mb-2" key={i}>
+            <p className="mb-2 dark:text-gray-300" key={i}>
               {des.des}
             </p>
           ))}

@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Intro from "@/components/sections";
@@ -114,7 +116,7 @@ const allJobs = [
         des: "1っか月にどれぐらいの収入を得たのか、また、どれぐらいお金を使ったのかを管理するためのサイトです。",
       },
       {
-        des: "ログイン/ログアウト、掲示板、収入と支出の登録及びリスト、リスト検索などの機能があります。",
+        des: "ログイン/ログアウト��掲示板、収入と支出の登録及びリスト、リスト検索などの機能があります。",
       },
     ],
     technologies: [
@@ -134,9 +136,22 @@ const allJobs = [
 ];
 
 const Home = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
-      <Header />
+      <div className="w-screen">
+        <Header />
+      </div>
+
       <main>
         <Intro />
         <div id="about" className="bg-gray-50 dark:bg-slate-900">
