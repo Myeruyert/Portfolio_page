@@ -8,17 +8,19 @@ const Intro = () => {
     <section className="flex flex-col-reverse md:flex-row justify-between py-12 md:py-24 px-4 md:px-20 gap-8">
       <div className="w-full md:w-1/2 text-center md:text-left">
         <div className="text mb-8 md:mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold">Hi, I'm Mery 👋</h1>
-          <Paragraphs paragraph="..." />
+          <h1 className="text-4xl md:text-6xl font-bold">こんにちは！</h1>
+          <h1 className="text-4xl md:text-6xl font-bold　mt-2">
+            メルエルトです👋
+          </h1>
         </div>
         <div className="mb-12">
           <div className="mb-2 flex items-center justify-center md:justify-start">
             <SlLocationPin className="mr-2" />
-            <span>Ulaanbaatar, Mongolia</span>
+            <span>ウランバートル、モンゴル</span>
           </div>
           <div className="flex items-center justify-center md:justify-start">
             <GoDotFill className="mr-2 text-emerald-500" />
-            <span>Available for new projects</span>
+            <span>新規プロジェクト対応可能</span>
           </div>
         </div>
         <div className="logos flex justify-center md:justify-start">

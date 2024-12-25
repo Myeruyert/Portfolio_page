@@ -1,4 +1,4 @@
-const ExperienceCard = ({ companyLogo, jobTitle, jobRoles }) => {
+const ExperienceCard = ({ companyLogo, jobTitle, jobRoles, date }) => {
   return (
     <div className="flex flex-col md:flex-row justify-between drop-shadow-xl rounded-lg bg-gray-50 dark:bg-gray-800 dark:text-white mb-8 md:mb-12 p-4 md:p-8 gap-6">
       <div className="flex-none md:flex-1 text-center md:text-left">
@@ -21,7 +21,7 @@ const ExperienceCard = ({ companyLogo, jobTitle, jobRoles }) => {
         </ul>
       </div>
       <div className="flex-none md:flex-1 text-center md:text-end dark:text-gray-400">
-        <p>{new Date().toLocaleDateString()}</p>
+        <p>{date}</p>
       </div>
     </div>
   );

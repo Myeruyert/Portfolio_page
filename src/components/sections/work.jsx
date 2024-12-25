@@ -1,20 +1,7 @@
 import Titles from "../small_components";
 import ExternalLink from "../small_components/externalLink";
 
-const titles = [
-  { title: "React" },
-  { title: "Next.js" },
-  { title: "Typescript" },
-  { title: "Nest.js" },
-  { title: "PostgreSQL" },
-  { title: "Tailwindcss" },
-  { title: "Figma" },
-  { title: "Cypress" },
-  { title: "Storybook" },
-  { title: "Git" },
-];
-
-const Work = ({ projectName, image, description, swap }) => {
+const Work = ({ projectName, image, description, swap, technologies }) => {
   return (
     <div
       className={`flex flex-col ${
@@ -27,9 +14,15 @@ const Work = ({ projectName, image, description, swap }) => {
         <div className="text-gray-900 font-bold text-center md:text-left">
           {projectName}
         </div>
-        <p className="my-4 md:my-6">{description}</p>
+        <p className="my-4 md:my-6">
+          {description?.map((des, i) => (
+            <p className="mb-2" key={i}>
+              {des.des}
+            </p>
+          ))}
+        </p>
         <div className="flex flex-wrap gap-2 font-medium justify-center md:justify-start">
-          {titles?.map((titleOne, i) => (
+          {technologies?.map((titleOne, i) => (
             <Titles key={i} title={titleOne.title} />
           ))}
         </div>

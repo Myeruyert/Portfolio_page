@@ -132,3 +132,27 @@ li {
 .gitlogo {
   color: #f4511e;
 }
+
+.graphql {
+  color: #e535ab;
+}
+
+.csslogo {
+  color: #264de4;
+}
+
+.htmllogo {
+  color: #e34c26;
+}
+
+.npmlogo {
+  color: #cc3534;
+}
+
+section {
+  scroll-margin-top: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
