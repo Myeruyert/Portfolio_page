@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer flex flex-col items-center py-24">
-        <Titles title="連絡先" />
+        <Titles title="Contact" />
 
         <div className="my-12 ">
           <div className="mail flex items-center mb-4">

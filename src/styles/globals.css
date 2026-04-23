@@ -148,6 +148,25 @@ li {
   color: #cc3534;
 }
 
+.postmanlogo {
+  color: #ff6c37;
+}
+
+/* .pythonlogo {
+  color: #3776ab;
+} */
+
+.apachesparklogo {
+  color: #e44832;
+}
+
+/* .teratermlogo {
+  background-image: "url('public/images/teraterm.png')";
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
 section {
   scroll-margin-top: 4rem;
 }

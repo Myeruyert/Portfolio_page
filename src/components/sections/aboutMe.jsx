@@ -3,13 +3,13 @@ import Paragraphs from "../small_components/paragraphs";
 
 const paragraphDescriptions = [
   {
-    des: "現在、ソフトウェアエンジニアを目指しており、特にJavaScriptを中心に学んでいます。React.js、Next.js、Express.jsなどのフレームワークを活用して、フロントエンドおよびバックエンドの両方で貢献したいと考えており、常に新しい技術を学ぶ向上心を持っています。",
+    des: "I am currently aiming to become a software engineer, with a strong focus on JavaScript. I want to contribute to both frontend and backend development using frameworks such as React.js, Next.js, and Express.js, and I always stay motivated to learn new technologies.",
   },
   {
-    des: "エンジニアとしての将来の目標は、幅広い技術スキルを身につけ、実践的な開発に貢献することです。この目標を実現するために、前職を退職し、某IT教育研修機関でプログラミングを本格的に学び始めました。研修機関では、多くのプロジェクトに取り組み、実際の開発プロセスを体験しながら、実務に直結するスキルを習得しています。",
+    des: "My long-term goal as an engineer is to build a broad technical skill set and contribute to practical, real-world development. To achieve this, I left my previous role and began studying programming seriously at an IT training institute, where I have worked on many projects and gained hands-on, job-ready skills through real development workflows.",
   },
   {
-    des: "まだ正式な実務経験はありませんが、これらの経験を活かして、企業に対して即戦力として貢献できると考えています。",
+    des: "Although I do not yet have official professional engineering experience, I believe these project experiences have prepared me to contribute as a productive team member from day one.",
   },
 ];
 
@@ -18,7 +18,7 @@ const AboutMe = () => {
     <div className="">
       <div className="AboutMeWidth py-12 md:py-24 px-4 md:px-0">
         <div className="flex justify-center">
-          <Titles title="自己紹介" />
+          <Titles title="About Me" />
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 mx-4 md:mx-8 mt-8 md:mt-12">
@@ -34,7 +34,7 @@ const AboutMe = () => {
           {/* Text Section */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-gray-900 dark:text-white text-2xl md:text-3xl font-semibold mb-6">
-              わたしについて
+              About Me
             </h2>
 
             {paragraphDescriptions.map((para, i) => (

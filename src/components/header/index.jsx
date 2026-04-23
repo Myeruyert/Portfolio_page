@@ -2,6 +2,7 @@
 import { useTheme } from "next-themes";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { BsTranslate } from "react-icons/bs";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -21,9 +22,9 @@ const Header = () => {
   };
 
   return (
-    <div className="w-screen bg-white dark:bg-slate-900 shadow-sm">
-      <header className="w-2/3 mx-auto fixed top-0 left-0 right-0 ng-white z-50 ">
-        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-screen bg-green-500 dark:bg-slate-900 shadow-sm z-50">
+      <header className="w-screen mx-auto fixed top-0 left-0 right-0 ng-white z-50 bg-white dark:bg-slate-900 shadow-sm">
+        <div className="w-2/3 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <h1 className="text-2xl md:text-3xl font-bold">MERY</h1>
 
@@ -52,28 +53,41 @@ const Header = () => {
             {/* Desktop navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <ul className="flex space-x-6">
-                {["自己紹介", "スキル", "職歴", "プロジェクト", "連絡先"].map(
-                  (item, index) => (
-                    <li key={index}>
-                      <button
-                        onClick={() =>
-                          scrollToSection(
-                            ["about", "skills", "experience", "work", "footer"][
-                              index
-                            ]
-                          )
-                        }
-                        className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                        {item}
-                      </button>
-                    </li>
-                  )
-                )}
+                {[
+                  "About me",
+                  "Skills",
+                  "Work experience",
+                  "Projects",
+                  "Contact",
+                ].map((item, index) => (
+                  <li key={index}>
+                    <button
+                      onClick={() =>
+                        scrollToSection(
+                          ["about", "skills", "experience", "work", "footer"][
+                            index
+                          ],
+                        )
+                      }
+                      className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
+                      {item}
+                    </button>
+                  </li>
+                ))}
               </ul>
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                 {theme === "light" ? (
+                  <BsTranslate size={20} />
+                ) : (
+                  <BsTranslate size={20} />
+                )}
+              </button>
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                {theme === "dark" ? (
                   <MdOutlineLightMode size={20} />
                 ) : (
                   <MdOutlineDarkMode size={20} />
@@ -85,32 +99,36 @@ const Header = () => {
           {/* Mobile navigation */}
           <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {["自己紹介", "スキル", "職歴", "プロジェクト", "連絡先"].map(
-                (item, index) => (
-                  <button
-                    key={index}
-                    onClick={() =>
-                      scrollToSection(
-                        ["about", "skills", "experience", "work", "footer"][
-                          index
-                        ]
-                      )
-                    }
-                    className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
-                    {item}
-                  </button>
-                )
-              )}
+              {[
+                "About me",
+                "Skills",
+                "Work experience",
+                "Projects",
+                "Contact",
+              ].map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() =>
+                    scrollToSection(
+                      ["about", "skills", "experience", "work", "footer"][
+                        index
+                      ],
+                    )
+                  }
+                  className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
+                  {item}
+                </button>
+              ))}
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 flex items-center">
                 {theme === "light" ? (
                   <>
-                    <MdOutlineLightMode className="mr-2" /> ライトモード
+                    <MdOutlineLightMode className="mr-2" /> Light mode
                   </>
                 ) : (
                   <>
-                    <MdOutlineDarkMode className="mr-2" /> ダークモード
+                    <MdOutlineDarkMode className="mr-2" /> Dark mode
                   </>
                 )}
               </button>

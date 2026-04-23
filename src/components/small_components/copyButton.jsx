@@ -6,10 +6,10 @@ const CopyButton = () => {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(`メリ
-フロントエンドエンジニア
-メール: example@email.com
-電話: +976 99999999
+      await navigator.clipboard.writeText(`Myeruyert
+Frontend Engineer
+Email: example@email.com
+Phone: +976 99999999
 `);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds

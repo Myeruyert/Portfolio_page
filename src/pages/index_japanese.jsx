@@ -12,18 +12,6 @@ import { LuCopyright } from "react-icons/lu";
 
 const experiences = [
   {
-    jobTitle: "Software Engineer",
-    companyLogo: "/images/metro-logo.gif",
-    jobRoles: [
-      "Python, ApacheSpark, AWS зэрэг технологиудыг ашиглан",
-      " даатгалын хэрэглэгчийн мэдээллийг AWS рүү шилжүүлэх",
-      "Байгууллагын дотоодод ашиглах системийн backend, frontend хөгжүүлэлт хийх",
-      "Prepared and drafted contracts",
-      "Represented clients in court",
-    ],
-    date: "2025.02-2026.04",
-  },
-  {
     jobTitle: "Human Resources Specialist",
     companyLogo: "/images/gobi.png",
     jobRoles: [
@@ -43,19 +31,19 @@ const experiences = [
       "Translated legal documents from English to Mongolian",
       "Conducted legal research on case-related matters",
     ],
-    date: "2022.10-2023.04",
+    date: "2022.12-2023.04",
   },
-  // {
-  //   jobTitle: "Legal Consultant",
-  //   companyLogo: "/images/wpi.jpg",
-  //   jobRoles: [
-  //     "Provided legal advice and response strategies for disputes",
-  //     "Drafted legal documents",
-  //     "Prepared and drafted contracts",
-  //     "Represented clients in court",
-  //   ],
-  //   date: "2022.09-2022.10",
-  // },
+  {
+    jobTitle: "Legal Consultant",
+    companyLogo: "/images/wpi.jpg",
+    jobRoles: [
+      "Provided legal advice and response strategies for disputes",
+      "Drafted legal documents",
+      "Prepared and drafted contracts",
+      "Represented clients in court",
+    ],
+    date: "2022.09-2022.10",
+  },
 ];
 
 const allJobs = [
@@ -71,9 +59,7 @@ const allJobs = [
       {
         des: "Built the admin site: animal registration, adoption post creation, and donation post management.",
       },
-      {
-        des: "Registration/login feature: implemented sign-up and sign-in functionality.",
-      },
+      { des: "Registration/login feature: implemented sign-up and sign-in functionality." },
       {
         des: "Adoption feature owner: designed and implemented both frontend and backend for the adoption page.",
       },
@@ -162,7 +148,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-screen bg-green-500 dark:bg-slate-900">
+      <div className="w-screen">
         <Header />
       </div>
 
@@ -216,11 +202,10 @@ const Home = () => {
         </div>
       </main>
 
-      <div className="bg-gray-50 dark:bg-slate-900 margin-bottom-10">
+      <div className="bg-gray-50 dark:bg-slate-900">
         <div className="copyrightWidth flex justify-center items-center gap-2 py-6">
           <LuCopyright />
-          <span>2026 | Greetings with ❤️️ from Ulaanbaatar, Mongolia</span>
-          <span className="pb-10"></span>
+          <span>2024 | Greetings with ❤️️ from Ulaanbaatar</span>
         </div>
       </div>
     </>
