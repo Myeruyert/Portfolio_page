@@ -22,16 +22,18 @@ const Header = () => {
   };
 
   return (
-    <div className="w-screen bg-green-500 dark:bg-slate-900 shadow-sm z-50">
-      <header className="w-screen mx-auto fixed top-0 left-0 right-0 ng-white z-50 bg-white dark:bg-slate-900 shadow-sm">
-        <div className="w-2/3 mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-screen bg-transparent dark:bg-slate-900 z-50">
+      <header className="w-screen mx-auto fixed top-0 left-0 right-0 z-50 border-b border-gray-200/70 bg-white/90 backdrop-blur-md dark:border-slate-700 dark:bg-slate-900/90">
+        <div className="w-[92%] md:w-[85%] lg:w-2/3 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <h1 className="text-2xl md:text-3xl font-bold">MERY</h1>
+            <h1 className="text-2xl md:text-3xl font-bold tracking-wide text-gray-900 dark:text-white">
+              MERY
+            </h1>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+              className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800">
               <svg
                 className="h-6 w-6"
                 fill="none"
@@ -51,7 +53,7 @@ const Header = () => {
             </button>
 
             {/* Desktop navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-5">
               <ul className="flex space-x-6">
                 {[
                   "About me",
@@ -69,7 +71,7 @@ const Header = () => {
                           ],
                         )
                       }
-                      className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
+                      className="text-sm font-medium text-gray-600 hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-300 transition-colors">
                       {item}
                     </button>
                   </li>
@@ -77,7 +79,7 @@ const Header = () => {
               </ul>
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                className="p-2 rounded-full border border-gray-200 hover:bg-gray-100 dark:border-slate-700 dark:hover:bg-gray-800 transition-colors">
                 {theme === "light" ? (
                   <BsTranslate size={20} />
                 ) : (
@@ -86,7 +88,7 @@ const Header = () => {
               </button>
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                className="p-2 rounded-full border border-gray-200 hover:bg-gray-100 dark:border-slate-700 dark:hover:bg-gray-800 transition-colors">
                 {theme === "dark" ? (
                   <MdOutlineLightMode size={20} />
                 ) : (

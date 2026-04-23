@@ -71,10 +71,13 @@ const Skills = () => {
     <div className="py-12 md:py-24 px-4 md:px-0 skills">
       <div className="flex flex-col items-center text-center">
         <Titles title="Skills" />
-        <p className="mt-4 mb-8 md:mb-12"></p>
+        <p className="mt-4 mb-8 md:mb-12 text-gray-600 dark:text-gray-300 max-w-2xl">
+          Technologies I use to build maintainable products from frontend to
+          backend.
+        </p>
       </div>
 
-      <div className="icons text-4xl md:text-6xl flex flex-wrap gap-8 md:gap-16 justify-center md:justify-between">
+      <div className="icons flex flex-wrap gap-4 md:gap-6 justify-center">
         {allLogos?.map((logoOne, i) => (
           <Logos key={i} logos={logoOne.icon} texts={logoOne.label} />
         ))}

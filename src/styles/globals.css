@@ -22,14 +22,11 @@
   }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); */
 
 body {
-  /* padding: 0 80px 0 80px; */
   font-family: "Inter", sans-serif;
+  background-color: #ffffff;
 }
 
 section,
@@ -63,16 +60,16 @@ p,
 span,
 ul,
 li {
-  color: #4b5563;
+  color: #374151;
 }
 
 .introImage {
-  box-shadow: 60px 60px #e5e7eb;
+  box-shadow: 24px 24px #d1fae5;
   border: 10px solid white;
 }
 
 .aboutMeImage {
-  box-shadow: -60px 60px #e5e7eb;
+  box-shadow: -24px 24px #d1fae5;
   border: 10px solid white;
   background-image: url("https://s3-alpha-sig.figma.com/img/a823/7c2d/a751e4a2db426ecfca4f62d9ba3dc8f4?Expires=1722816000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ScmRPtqSr3oqubAqMFwbeSujIqtc0BEB7HBtiF3q3PwzAz9cdfVMmpsoJDvcjMHnSNvajy~qXtB8wwXM-leo4lRSaNwBRfMoNuwGDj40wzPE9nvWkc-0EMddEgBiOLhzwjSD-PVkn7gzA2TisMzyrmWDt0FgWVSBXrHiFdkcFKpq2xBUruNbzJmgQVyotlE4IdWS1tN1mtZ04u~1u7YBhpDCStbEKgzvukJL9q~MNfpij~qgzu92SDEwoLNt58-KSlVmtNPgPZa8EUbryKrmxdCyevmKvR5XY~ToLvEK5vavKlZJ-vQLzgBXg3fEwo0e0AvcKPbCnvsK1DBGTl9QAQ__");
   background-size: cover;
@@ -173,4 +170,14 @@ section {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+  .introImage {
+    box-shadow: 40px 40px #d1fae5;
+  }
+
+  .aboutMeImage {
+    box-shadow: -40px 40px #d1fae5;
+  }
 }

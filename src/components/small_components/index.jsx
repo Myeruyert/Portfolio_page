@@ -1,10 +1,10 @@
 const Titles = ({ title }) => {
-    return (
-      <div className=" rounded-full bg-gray-200 py-1 px-5 w-fit text-gray-600">
-        {title}
-      </div>
-    );
-  };
-  
-  export default Titles;
+  return (
+    <div className="rounded-full border border-emerald-100 bg-emerald-50/80 px-5 py-1.5 w-fit text-sm font-semibold tracking-wide text-emerald-700 shadow-sm dark:border-emerald-800 dark:bg-emerald-900/20 dark:text-emerald-300">
+      {title}
+    </div>
+  );
+};
+
+export default Titles;
   

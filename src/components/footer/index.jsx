@@ -6,26 +6,25 @@ import SocialLinks from "../small_components/socialLinks";
 const Footer = () => {
   return (
     <>
-      <div className="footer flex flex-col items-center py-24">
+      <div className="footer flex flex-col items-center py-20 md:py-24 text-center">
         <Titles title="Contact" />
 
-        <div className="my-12 ">
-          <div className="mail flex items-center mb-4">
-            <CiMail className="text-3xl" />
-            <span className="text-4xl mx-5 font-semibold text-gray-900 dark:text-gray-300">
+        <div className="my-10 md:my-12 w-full max-w-3xl rounded-3xl border border-gray-100 bg-white p-6 md:p-10 shadow-sm dark:border-slate-700 dark:bg-slate-800/70">
+          <div className="mail flex items-center justify-center mb-6 gap-3 md:gap-4">
+            <CiMail className="text-2xl md:text-3xl text-emerald-700 dark:text-emerald-300" />
+            <span className="text-xl md:text-3xl font-semibold text-gray-900 dark:text-gray-200 break-all">
               j.myeruyert@gmail.com
             </span>
-            {/* <BsCopy className="text-3xl" /> */}
           </div>
-          <div className="phone flex items-center">
-            <IoCallOutline className="text-3xl" />
-            <span className="text-4xl mx-5 font-semibold text-gray-900 dark:text-gray-300">
+          <div className="phone flex items-center justify-center gap-3 md:gap-4">
+            <IoCallOutline className="text-2xl md:text-3xl text-emerald-700 dark:text-emerald-300" />
+            <span className="text-xl md:text-3xl font-semibold text-gray-900 dark:text-gray-200">
               + 976 85256776
             </span>
           </div>
         </div>
-        <div className="mb-2 dark:text-gray-300">
-          <span className="dark:text-gray-300">
+        <div className="mb-2 text-gray-700 dark:text-gray-300">
+          <span>
             You may also find me on these platforms!
           </span>
         </div>

@@ -162,25 +162,27 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-screen bg-green-500 dark:bg-slate-900">
+      <div className="w-screen bg-transparent dark:bg-slate-900">
         <Header />
       </div>
 
-      <main>
+      <main className="bg-white dark:bg-slate-900">
         <Intro />
-        <div id="about" className="bg-gray-50 dark:bg-slate-900">
+        <div id="about" className="bg-gray-50/80 dark:bg-slate-900">
           <AboutMe />
         </div>
-        <section id="skills">
+        <section id="skills" className="bg-white dark:bg-slate-900">
           <Skills />
         </section>
-        <div className="bg-gray-50 py-24 dark:bg-slate-900" id="experience">
+        <div className="bg-gray-50/80 py-20 md:py-24 dark:bg-slate-900" id="experience">
           <div className="experienceWidth">
             <div className="flex flex-col items-center">
               <Titles title="Work Experience" />
-              <p className="mt-4 mb-12"></p>
+              <p className="mt-4 mb-10 text-gray-600 dark:text-gray-300 text-center">
+                A journey across engineering, operations, and problem solving.
+              </p>
             </div>
-            <div className="mx-24">
+            <div className="mx-2 md:mx-10">
               {experiences?.map((experience, i) => (
                 <ExperienceCard
                   key={i}
@@ -193,11 +195,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="work py-24" id="work">
-          <div className="flex flex-col items-center justify-center mt-24">
-            {/* <Titles title="Projects" /> */}
+        <div className="work py-20 md:py-24" id="work">
+          <div className="flex flex-col items-center justify-center">
             <Titles title="Projects" />
-            <p className="mt-4 mb-12"></p>
+            <p className="mt-4 mb-10 text-gray-600 dark:text-gray-300 text-center">
+              Selected projects focused on real users and practical outcomes.
+            </p>
 
             {allJobs?.map((project, i) => (
               <Work
@@ -216,10 +219,12 @@ const Home = () => {
         </div>
       </main>
 
-      <div className="bg-gray-50 dark:bg-slate-900 margin-bottom-10">
+      <div className="bg-gray-50 dark:bg-slate-900 margin-bottom-10 border-t border-gray-200 dark:border-slate-700">
         <div className="copyrightWidth flex justify-center items-center gap-2 py-6">
-          <LuCopyright />
-          <span>2026 | Greetings with ❤️️ from Ulaanbaatar, Mongolia</span>
+          <LuCopyright className="text-gray-600 dark:text-gray-300" />
+          <span className="text-gray-600 dark:text-gray-300">
+            2026 | Greetings with ❤️ from Ulaanbaatar, Mongolia
+          </span>
           <span className="pb-10"></span>
         </div>
       </div>
