@@ -76,6 +76,16 @@ li {
   background-position: center;
 }
 
+.dark .introImage {
+  box-shadow: 24px 24px #065f46;
+  border-color: #1e293b;
+}
+
+.dark .aboutMeImage {
+  box-shadow: -24px 24px #065f46;
+  border-color: #1e293b;
+}
+
 .aboutme {
   list-style: disc;
   margin-left: 20px;
@@ -179,5 +189,13 @@ html {
 
   .aboutMeImage {
     box-shadow: -40px 40px #d1fae5;
+  }
+
+  .dark .introImage {
+    box-shadow: 40px 40px #065f46;
+  }
+
+  .dark .aboutMeImage {
+    box-shadow: -40px 40px #065f46;
   }
 }

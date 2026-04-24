@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mb-2 text-gray-700 dark:text-gray-300">
-          <span>
+          <span className="dark:text-gray-300">
             You may also find me on these platforms!
           </span>
         </div>

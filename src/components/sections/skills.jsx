@@ -30,9 +30,36 @@ const allLogos = [
   { label: "JavaScript", icon: <SiJavascript className="jslogo" /> },
   { label: "TypeScript", icon: <SiTypescript className="tslogo" /> },
   { label: "GraphQL", icon: <SiGraphql className="graphql" /> },
-  { label: "Python", icon: <SiPython className="pythonlogo" /> },
-  { label: "Java", icon: <FaJava className="javalogo" /> },
-  { label: "AWS", icon: <FaAws className="awslogo" /> },
+  {
+    label: "Python",
+    icon: (
+      <img
+        src="/images/Python-logo.svg"
+        alt="TeraTerm logo"
+        className="h-10 w-10 object-contain md:h-12 md:w-12"
+      />
+    ),
+  },
+  {
+    label: "Java",
+    icon: (
+      <img
+        src="/images/java.png"
+        alt="TeraTerm logo"
+        className="h-10 w-10 object-contain md:h-12 md:w-12"
+      />
+    ),
+  },
+  {
+    label: "AWS",
+    icon: (
+      <img
+        src="/images/Amazon_Web_Services-Logo.wine.png"
+        alt="TeraTerm logo"
+        className="h-10 w-10 object-contain md:h-12 md:w-12"
+      />
+    ),
+  },
   { label: "React", icon: <FaReact className="reactlogo" /> },
   { label: "Next.js", icon: <SiNextdotjs className="nextlogo" /> },
   { label: "Node.js", icon: <SiNodedotjs className="nodelogo" /> },
@@ -43,6 +70,16 @@ const allLogos = [
     label: "Apache Spark",
     icon: <SiApachespark className="apachesparklogo" />,
   },
+  {
+    label: "Apache Iceberg",
+    icon: (
+      <img
+        src="/images/Iceberg-logo.svg"
+        alt="TeraTerm logo"
+        className="h-10 w-16 object-contain md:h-12 md:w-16"
+      />
+    ),
+  },
   { label: "Tailwindcss", icon: <SiTailwindcss className="tailwindlogo" /> },
   { label: "Shadcnui", icon: <SiShadcnui className="shadcnlogo" /> },
   { label: "Cypress", icon: <SiCypress className="cypresslogo" /> },
@@ -51,19 +88,26 @@ const allLogos = [
   { label: "NPM", icon: <SiNpm className="npmlogo" /> },
   { label: "Git", icon: <FaGitAlt className="gitlogo" /> },
   { label: "Postman", icon: <SiPostman className="postmanlogo" /> },
-  { label: "Vercel", icon: <SiVercel className="vercellogo" /> },
-  // {
-  //   label: "TeraTerm",
-  //   image: "public/images/teraterm.png",
-  //   className: "teratermlogo",
-  //   backgroundImage: (
-  //     <img
-  //       src="public/images/teraterm.png"
-  //       className="teratermlogo"
-  //       style={{ backgroundImage: "url('public/images/teraterm.png')" }}
-  //     />
-  //   ),
-  // },
+  {
+    label: "Vercel",
+    icon: (
+      <img
+        src="/images/vercel-icon.svg"
+        alt="TeraTerm logo"
+        className="h-10 w-10 object-contain md:h-12 md:w-12"
+      />
+    ),
+  },
+  {
+    label: "TeraTerm",
+    icon: (
+      <img
+        src="/images/teraterm.png"
+        alt="TeraTerm logo"
+        className="h-10 w-10 object-contain md:h-12 md:w-12"
+      />
+    ),
+  },
 ];
 
 const Skills = () => {

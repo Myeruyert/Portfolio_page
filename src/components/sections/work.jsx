@@ -1,7 +1,15 @@
 import Titles from "../small_components";
 import ExternalLink from "../small_components/externalLink";
+import NotAvailableLink from "../small_components/notAvailableLink";
 
-const Work = ({ projectName, image, description, swap, technologies }) => {
+const Work = ({
+  projectName,
+  image,
+  description,
+  swap,
+  technologies,
+  link,
+}) => {
   return (
     <div
       className={`flex flex-col ${
@@ -20,7 +28,9 @@ const Work = ({ projectName, image, description, swap, technologies }) => {
         </div>
         <div className="my-4 md:my-6">
           {description?.map((des, i) => (
-            <p className="mb-2 text-gray-700 leading-7 dark:text-gray-300" key={i}>
+            <p
+              className="mb-2 text-gray-700 leading-7 dark:text-gray-300"
+              key={i}>
               {des.des}
             </p>
           ))}
@@ -30,7 +40,7 @@ const Work = ({ projectName, image, description, swap, technologies }) => {
             <Titles key={i} title={titleOne.title} />
           ))}
         </div>
-        <ExternalLink />
+        {/* {link ? <ExternalLink /> : <NotAvailableLink />} */}
       </div>
     </div>
   );
