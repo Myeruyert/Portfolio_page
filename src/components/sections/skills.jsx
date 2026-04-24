@@ -25,6 +25,7 @@ import { SiVercel } from "react-icons/si";
 
 import Titles from "../small_components";
 import Logos from "../small_components/logos";
+import { useLanguage } from "@/context/languageContext";
 
 const allLogos = [
   { label: "JavaScript", icon: <SiJavascript className="jslogo" /> },
@@ -111,13 +112,32 @@ const allLogos = [
 ];
 
 const Skills = () => {
+  const { language } = useLanguage();
+  const copy = {
+    en: {
+      title: "Skills",
+      subtitle:
+        "Technologies I use to build maintainable products from frontend to backend.",
+    },
+    mn: {
+      title: "Ур чадвар",
+      subtitle:
+        // "Frontend-оос backend хүртэл тогтвортой, өргөтгөх боломжтой бүтээгдэхүүн бүтээхдээ ашигладаг технологиуд.",
+        "",
+    },
+    ja: {
+      title: "スキル",
+      subtitle:
+        "フロントエンドからバックエンドまで、保守しやすいプロダクトを作るために使っている技術です。",
+    },
+  };
+
   return (
     <div className="py-12 md:py-24 px-4 md:px-0 skills">
       <div className="flex flex-col items-center text-center">
-        <Titles title="Skills" />
+        <Titles title={copy[language].title} />
         <p className="mt-4 mb-8 md:mb-12 text-gray-600 dark:text-gray-300 max-w-2xl">
-          Technologies I use to build maintainable products from frontend to
-          backend.
+          {copy[language].subtitle}
         </p>
       </div>
 

@@ -18,7 +18,7 @@ const ExperienceCard = ({
           className="w-20 md:w-24 mx-auto md:mx-0 rounded-lg"
         />
       </div>
-      <div className="max-w-[500px] flex-auto md:flex-2">
+      <div className="max-w-[560px] flex-auto md:flex-2">
         <h1 className="font-bold text-lg md:text-xl  text-center md:text-left dark:text-white">
           {jobTitle}
         </h1>

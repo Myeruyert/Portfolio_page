@@ -2,6 +2,7 @@
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
+import { LanguageProvider } from "@/context/languageContext";
 
 function MyApp({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false);
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <Component {...pageProps} />
+      <LanguageProvider>
+        <Component {...pageProps} />
+      </LanguageProvider>
     </ThemeProvider>
   );
 }
