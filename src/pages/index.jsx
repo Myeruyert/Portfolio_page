@@ -210,7 +210,7 @@ const allJobsByLanguage = {
           des: "Developed backend and frontend features for enterprise applications using Java-based frameworks.",
         },
         {
-          des: "Implemented features such as: Batch update processing, Application/approval workflows, File input/output handling, Data validation and checking functions.",
+          des: "Implemented features such as: Application/approval workflows, File input/output handling, Data validation and checking functions.",
         },
         {
           des: "Investigated and resolved system issues and bugs.",
